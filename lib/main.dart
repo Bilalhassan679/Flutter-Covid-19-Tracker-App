@@ -2,6 +2,7 @@
 import 'package:covid_tracker/View/getxPractice.dart';
 import 'package:covid_tracker/View/modes_notify.dart';
 import 'package:covid_tracker/View/splash_screen.dart';
+import 'package:covid_tracker/View/world_state.dart';
 import 'package:covid_tracker/controller/themeChangeController.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -35,8 +36,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
-      Obx(
-      () =>
+      // Obx(
+      // () =>
           GetMaterialApp(
       // child: GetMaterialApp(
 
@@ -44,16 +45,16 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData (
           // brightness: box.read('themeChange') == true ? Brightness.light :Brightness.dark,
-          // brightness: box.read('key') == true ? Brightness.light :Brightness.dark,
-          brightness: themeChangeController.s.value == true ? Brightness.light :Brightness.dark,
+          brightness: box.read('key') == true ? Brightness.light :Brightness.dark,
+          // brightness: themeChangeController.s.value == true ? Brightness.light :Brightness.dark,
           primarySwatch: Colors.blue,
 
         ),
 
         // home: const SplashScreen(),
-        home: getxPractice(),
-      ),
-    );
+        home: SplashScreen(),
+      );
+    // );
 }
 
 }
