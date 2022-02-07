@@ -1,25 +1,28 @@
-/// updated : 1643892389574
-/// cases : 385963791
-/// todayCases : 836030
-/// deaths : 5721167
-/// todayDeaths : 3011
-/// recovered : 305835582
-/// todayRecovered : 554997
-/// active : 74407042
-/// critical : 92047
-/// casesPerOneMillion : 49516
-/// deathsPerOneMillion : 734
-/// tests : 5156528140
-/// testsPerOneMillion : 654451.01
-/// population : 7879166024
+import 'dart:convert';
+/// updated : 1644238978767
+/// cases : 396528645
+/// todayCases : 663339
+/// deaths : 5760343
+/// todayDeaths : 1913
+/// recovered : 315265532
+/// todayRecovered : 642313
+/// active : 75502770
+/// critical : 91189
+/// casesPerOneMillion : 50871
+/// deathsPerOneMillion : 739
+/// tests : 5215104986
+/// testsPerOneMillion : 661816.6
+/// population : 7879985120
 /// oneCasePerPeople : 0
 /// oneDeathPerPeople : 0
 /// oneTestPerPeople : 0
-/// activePerOneMillion : 9443.52
-/// recoveredPerOneMillion : 38815.73
-/// criticalPerOneMillion : 11.68
+/// activePerOneMillion : 9581.59
+/// recoveredPerOneMillion : 40008.39
+/// criticalPerOneMillion : 11.57
 /// affectedCountries : 225
 
+WorldStatesModel worldStatesModelFromJson(String str) => WorldStatesModel.fromJson(json.decode(str));
+String worldStatesModelToJson(WorldStatesModel data) => json.encode(data.toJson());
 class WorldStatesModel {
   WorldStatesModel({
       int? updated, 

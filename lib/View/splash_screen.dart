@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:covid_tracker/Services/states_services.dart';
 import 'package:covid_tracker/View/world_state.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math ;
@@ -25,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     // TODO: implement initState
     super.initState();
     Timer(const Duration(seconds: 3),() => Get.to(() => const WorldState()));
-
+    StatesServices();
   }
 
   @override
